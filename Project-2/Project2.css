@@ -1,0 +1,1182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(60,58,180);
+    background: linear-gradient(83deg, rgba(60,58,180,1) 0%, rgba(29,192,253,0.5441526952577906) 56%, rgba(69,242,252,0.5133403703278187) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.greybg{
+    width: 85vw;
+    height: 85vh;
+    background-color: white;
+    position: relative;
+}
+
+.navbar{
+    height: 75vh;
+    width: 6vw;
+    background-color: rgb(191, 225, 237);
+    border-radius: 3.5rem;
+    position: absolute;
+    left: 6rem;
+    z-index: 19;
+}
+
+.navbar-icons img{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    margin-left: 2.7rem;
+}
+
+.navbar-icons img:hover{
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: all ease 0.2s;
+}
+
+.navbar{grid-area: navbar;}
+.tiles{grid-area: tiles;}
+.about{grid-area: about;}
+.graph{grid-area: graph;}
+.buttons{grid-area: buttons;}
+.videos{grid-area: videos;}
+.section{grid-area: section;}
+.photos{grid-area: photos;}
+
+.container{
+    height: 84vh;
+    width: 96%;
+    margin-left: 4rem;
+    margin-top: 0.3rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.85fr;
+    grid-template-rows: 1fr 0.4fr 0.6fr 0.2fr 0.8fr;
+    grid-template-areas: 
+    'tiles tiles about'
+    'graph buttons about'
+    'graph buttons videos'
+    'graph buttons photos'
+    'section section photos';
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 1.5rem;
+}
+
+#card{
+    /* border: 2px solid red; */
+    background-color: white;
+}
+
+/* -------------------------------TILES-------------------------------- */
+
+.tiles .tiles-tiles{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tiles h3{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.tiles .tiles-tile1, .tiles .tiles-tile2, .tiles .tiles-tile3{
+    height: 15vh;
+    width: 32%;
+    background-color: #87CEEB;
+    border-radius: 0.7rem;
+    margin: 0.8rem;
+    box-shadow: 0.3rem 0.3rem 5px 6px rgba(225,225,225,0.5);
+    text-align: center;
+    display: flex;
+}
+
+.tiles .tile1-img{
+    height: 8vh;
+    width: 23%;
+    margin: 2rem;
+    margin-left: 3rem; 
+}
+
+.tiles .tile2-img{
+    height: 10vh;
+    width: 29%;
+    margin-top: 1.2rem;
+    margin-left: 2.5rem;     
+}
+
+.tiles .tile3-img{
+    height: 10vh;
+    width: 29%;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;     
+}
+
+.tiles .tile1-content{
+    margin-top: 2.7rem;
+    margin-left: 1.1rem;
+}
+
+.tiles .tile2-content{
+    margin-top: 2.7rem;
+    margin-left: 2.2rem;    
+}
+
+.tiles .tile3-content{
+    margin-top: 2.7rem;
+    margin-left: 1.8rem;    
+}
+
+.tiles-tiles h6{
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.tiles-tiles span{
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* -------------------------------ABOUT-------------------------------- */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+}
+.about .about1 img{
+    height: 12vh;
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.about .about1{
+    text-align: center;
+}
+
+.about .about1 h2{
+    color: #000080;
+}
+
+.about .about1 h4{
+    margin-top: 0.4rem;
+    color: #A9A9A9;
+}
+
+.about .about2{
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.about2 .about2-following, .about2-followers, .about2-posts{
+   padding: 1rem;
+   padding-right: 2.5rem;
+   margin-top: 0.9rem;
+   text-align: center;
+}
+
+.about .about2{
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+.about .about2 h4{
+    margin-top: 0.1rem;
+    color: #A9A9A9;
+    font-size: 1.1rem;
+}
+
+.about .about2 h3{
+    font-size: 1.3rem;
+    font-family: 'Merriweather', serif;
+}
+
+.about .about3 button{
+    height: 5.2vh;
+    width: 42%;
+    margin-right: 0.5rem;
+    margin-left: 0.8rem;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about3 .about3-bt1{
+    background-color: #87CEFA;
+    color: white;
+}
+
+.about .about3 .about3-bt1:hover{
+    background-color: rgba(225,225,225,0.5);
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all ease-in-out 0.4s;
+}
+
+.about .about3 .about3-bt2:hover{
+    background-color: #87CEFA;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+/* -------------------------------GRAPH-------------------------------- */
+
+.graph .graph-con{
+    display: flex;
+    width: 38vw;
+}
+
+.graph .graph1{
+    text-align: center;
+    margin-right: 4rem;
+    width: 100%;
+}
+
+.graph .graph1 span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: #000080;
+}
+
+.graph .graph1 p{
+    font-family: 'Merriweather', serif;
+    font-size: 0.8rem;
+    color: #A9A9A9;
+}
+
+.graph h3{
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.graph h4{
+    margin-left: 1.8rem;
+    font-size: 1.1rem;
+}
+.graph .graph2 img{
+    height: 24vh;
+    width: 30vw;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+}
+
+/* -------------------------------BUTTONS-------------------------------- */
+
+.buttons h3{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.buttons .btn1, .btn2, .btn3{
+    height: 9vh;
+    border-bottom: 2px solid #DCDCDC;
+    display: flex;
+}
+
+.buttons .btn1:hover, .btn2:hover, .btn3:hover{
+    background-color: #AFDCEC;
+}
+
+.buttons .icons{
+    width: 7%;
+    height: 4vh;
+    margin-top: 1.7rem;
+    margin-left: 1rem;
+}
+
+.buttons .next{
+    width: 3%;
+    height: 1.6vh;
+    margin-top: 2rem;
+}
+
+.buttons .btn1 .next{
+    margin-left: 13rem;
+}
+
+.buttons .btn2 .next{
+    margin-left: 15.45rem;
+}
+
+.buttons .btn3 .next{
+    margin-left: 16.7rem;
+}
+
+.buttons .next:hover{
+    cursor: pointer;
+}
+
+.buttons .text{
+    margin-left: 1.3rem;
+    margin-top: 2rem;
+    font-size: 1.28rem;
+}
+
+/* -------------------------------VIDEOS-------------------------------- */
+
+.videos{
+    display: flex;
+}
+
+.videos1, .photos1{
+    width: 48%;
+    text-align: center;
+}
+
+.videos1{
+    margin-right: 1rem;
+    background-color: rgba(225,225,225,0.5);
+    border-radius: 1.5rem;
+}
+
+.videos1 .videos1-icon{
+    margin-top: 1.3rem;
+}
+
+.videos1 .videos1-icon .fa-camera{
+    color: black;
+}
+
+.videos1 .videos1-txt{
+    margin-top: 1.1rem;
+    color: black;
+}
+
+.videos1 .videos1-txt h3{
+    margin-bottom: 0.2rem;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1rem;
+}
+
+.photos1{
+    margin-right: 1rem;
+    background-color: #89CFF0;
+    border-radius: 1.5rem;
+}
+
+.photos1 .photos1-icon{
+    margin-top: 1.3rem;
+}
+
+.photos1 .photos1-icon .fa-video{
+    color: white;
+}
+
+.photos1 .photos1-txt{
+    margin-top: 1.1rem;
+    color: white;
+}
+
+.photos1 .photos1-txt h3{
+    margin-bottom: 0.2rem;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1rem;
+}
+
+.videos1:hover{
+    cursor: pointer;
+    background-color: rgba(225,225,225,0.8);
+    box-shadow: 0.1rem 0.1rem 5px 4px rgba(225,225,225,0.5);
+}
+
+.photos1:hover{
+    cursor: pointer;
+    background-color: rgba(137, 207, 240, 0.7);
+    box-shadow: 0.1rem 0.1rem 5px 4px rgba(225,225,225,0.5);
+}
+
+/* -------------------------------SECTION-------------------------------- */
+
+/* STATISTICS */
+
+.section{
+    display: flex;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.bar{
+    width: 60%;
+}
+
+.scpost, .newpost{
+    width: 20%;
+}
+
+.section .bar .bar2{
+    display: flex;
+}
+
+.bar2 .weekly, .bar2 .monthly{
+    margin: auto;
+    width: 49%;
+    height: 13.5vh;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.bar1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.progress1{
+    width: 92%;
+    height: 2vh;
+    background-color: rgba(225,225,225,0.7);
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.progress1-1{
+    width: 20%;
+    height: 2vh;
+    background-color: #FFC000;
+    border-radius: 1rem;
+    
+}
+
+.progress2{
+    width: 92%;
+    height: 2vh;
+    background-color: white;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.progress2-1{
+    width: 51%;
+    height: 2vh;
+    background-color: #FFC000;
+    border-radius: 1rem;
+    
+}
+
+.monthly{
+    background-color: rgb(135, 206, 235);
+}
+
+.weekly h4, .monthly h4{
+    margin: 1rem 0;
+}
+
+.weekly p, .monthly p{
+    margin-top: 1rem;
+}
+
+.monthly{
+    color: white;
+    border-radius: 1rem;
+}
+
+/* SCHEDULE ADD POST */
+
+.scpost, .newpost{
+    text-align: center;
+    padding: 2rem;
+    background: rgba(225,225,225,0.4);
+    border-radius: 3rem;
+}
+
+.scpost .scpost-icon, .newpost .newpost-icon{
+    width: 10%;
+    height: 2vh;
+    background-color: #87CEFA;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-left: 3.1rem;
+    margin-bottom: 0.7rem;  
+    margin-top: 1rem; 
+}
+
+.scpost{
+    padding-left: 2.5rem;
+}
+.scpost .scpost-icon:hover, .newpost .newpost-icon:hover{
+    background-color: white;
+}
+
+.fa-calendar-days, .fa-plus{
+    color: white;
+}
+
+.fa-calendar-days:hover, .fa-plus:hover{
+    color: #87CEFA;
+}
+
+/* -------------------------------PHOTOS-------------------------------- */
+
+.photo-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 0.1rem;
+    row-gap: 0.1rem;
+    width: 95%;
+    margin-left: 0.3rem;
+}
+
+.photo-grid img{
+    width: 100%;
+    height: 12.3vh;
+}
+
+.photo-grid .p1{
+    border-top-left-radius: 1rem;
+}
+
+.photo-grid .p3{
+    border-top-right-radius: 1rem;
+}
+
+.photo-grid .p4{
+    border-bottom-left-radius: 1rem;
+}
+
+.photo-grid .p6{
+    border-bottom-right-radius: 1rem;
+}
+
+.photo-grid:hover{
+    cursor: pointer;
+}
+
+/* -------------------------------RESPONSIVE------------------------------- */
+
+@media screen and (min-width: 1619px) and (max-width: 2025px) {
+    .greybg{
+        width: 93vw;
+    }  
+
+    .navbar{
+        left: 0.8rem;
+    }
+
+} 
+
+@media screen and (min-width: 1619px) and (max-width: 1725px) {
+   
+    .navbar-icons img{
+        margin-left: 2rem;
+    }
+
+    .scpost .scpost-icon{
+        margin-left: 2.2rem;
+    }
+
+    .newpost .newpost-icon{
+        margin-left: 2.6rem;
+    }
+
+    .buttons .btn1 .next{
+        margin-left: 9rem;
+    }
+    
+    .buttons .btn2 .next{
+        margin-left: 11.5rem;
+    }
+    
+    .buttons .btn3 .next{
+        margin-left: 12.9rem;
+    }
+
+    .buttons .icons{
+        width: 7%;
+        height: 3vh;
+    }
+
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1618px){
+
+    body{
+        background: white;
+    }
+
+    .greybg{
+        width: 90vw;
+    }
+
+    .navbar{
+        left: 3rem;
+        border-radius: 1rem;
+    }
+    
+    .navbar-icons img{
+        margin-left: 2rem;
+    }
+
+    .buttons .btn1 .next{
+        display: none;
+    }
+    
+    .buttons .btn2 .next{
+        display: none;
+    }
+    
+    .buttons .btn3 .next{
+        display: none;
+    }
+
+    .buttons .icons{
+        width: 8%;
+        height: 3vh;
+    }
+
+    .scpost .scpost-icon, .newpost .newpost-icon{
+        margin-left: 1.8rem;
+    }
+
+    .tiles .tile1-img{
+        height: 7vh;
+        width: 23%;
+        margin: 1.5rem;
+        margin-top: 2.5rem;
+        margin-left: 3rem; 
+    }
+    
+    .tiles .tile2-img{
+        height: 9vh;
+        width: 29%;
+        margin-top: 1.6rem;
+        margin-left: 2.7rem;   
+    }
+    
+    .tiles .tile3-img{
+        height: 9vh;
+        width: 29%;
+        margin-top: 1.8rem;
+        margin-left: 2.5rem;     
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 1400px){
+
+    .greybg{
+        background: transparent;
+    }
+
+    body{
+        background: white;
+    }
+
+    .container{
+        display: grid;
+        grid-template-rows: 2fr 3fr 2fr 1fr 3fr 3fr;
+        row-gap: 2.4rem;
+        grid-template-areas: 
+        'about'
+        'tiles'
+        'graph'
+        'buttons'
+        'videos'
+        'section'
+        'photos';
+    }
+
+    #card{
+        width: 102vw;
+        border-radius: 2rem;
+        margin: auto;
+     }
+
+     .navbar{
+        display: none;
+     }
+
+     /* ABOUT-RESPONSIVE */
+     .about{
+        height: 115vh;
+     }
+
+    .about .about1 img{
+        height: 35vh;
+        width: 28vw;
+        border-radius: 1.5rem;
+        margin-bottom: 2rem;
+        margin-top: 8rem;
+    }
+
+    .about .about1 h4{
+        margin-top: 0.4rem;
+        color: #A9A9A9;
+        font-size: 3rem;
+    }
+    
+    .about2 .about2-following, .about2-followers, .about2-posts{
+       padding: 3rem;
+       padding-right: 4.5rem;
+       margin-top: 2rem;
+       text-align: center;
+    }
+    
+    .about .about2{
+        text-align: center;
+        margin-top: 0.9rem;
+    }
+    
+    .about .about2 h4{
+        margin-top: 0.3rem;
+        font-size: 2.5rem;
+    }
+    
+    .about .about2 h3{
+        font-size: 3rem;
+    }
+    
+    .about .about3 button{
+        height: 10vh;
+        width: 34%;
+        margin-left: 10rem;
+        margin-top: 5rem;
+        font-size: 2.3rem;
+        font-weight: 600;
+
+    }
+
+    .about .about1 h2{
+        font-size: 3.5rem;
+    }
+
+     /* TILES-RESPONSIVE */
+    .tiles{
+        height: 40vh;
+    }
+     .tiles h3{
+        font-size: 2.8rem;
+        margin-top: 3rem;
+    }
+
+    .tiles .tiles-tile1, .tiles .tiles-tile2, .tiles .tiles-tile3{
+        height: 24vh;
+        width: 32%;;
+        margin: 0.8rem;
+    }
+
+    .tiles .tile1-img{
+        height: 12vh;
+        width: 10vw;
+        margin: 1rem 1rem;
+    }
+    
+    .tiles .tile2-img{
+        height: 14vh;
+        width: 12.5vw;
+        margin-top: 3.2rem;
+        margin-left: 3rem;     
+    }
+    
+    .tiles .tile3-img{
+        height: 14vh;
+        width: 12vw;
+        margin-top: 3.2rem;
+        margin-left: 2.5rem;     
+    }
+    
+    .tiles .tile1-content{
+        margin-top: 6rem;
+        margin-left: 1.1rem;
+    }
+    
+    .tiles .tile2-content{
+        margin-top: 6rem;
+        margin-left: 3.7rem;    
+    }
+    
+    .tiles .tile3-content{
+        margin-top: 6rem;
+        margin-left: 3.7rem;    
+    }
+
+    .tiles-tiles h6{
+        font-size: 2rem;
+    }
+    
+    .tiles-tiles span{
+        font-size: 2.7rem;
+    }
+
+    /* GRAPH-RESPONSIVE */
+    .graph{
+        height: 85vh;
+    }
+    .graph .graph-con{
+        width: 65vw;
+        margin-left: 4.5rem;
+        margin-top: 2.6rem;
+        position: relative;
+    }
+    
+    .graph .graph1{
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        left: 30rem;
+    }
+    
+    .graph .graph1 span{
+        font-family: 'Oswald', sans-serif;
+        font-size: 7rem;
+        color: #000080;
+    }
+    
+    .graph .graph1 p{
+        font-family: 'Merriweather', serif;
+        font-size: 2rem;
+        color: #A9A9A9;
+    }
+    
+    .graph h3{
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 2.8rem;
+    }
+    
+    .graph h4{
+        margin-left: 6rem;
+        font-size: 2.5rem;
+    }
+    .graph .graph2 img{
+        height: 40vh;
+        width: 80vw;
+        margin-top: 12rem;
+        margin-left: 6rem;
+    }
+
+    /* BUTTONS RESPONSIVE */
+    .buttons{
+        height: 62vh;
+    }
+
+    .buttons h3{
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 2.7rem;
+    }
+    
+    .buttons .btn1, .btn2, .btn3{
+        margin-left: 20rem;
+        height: 14vh;
+        border-bottom: 2px solid #DCDCDC;
+        display: flex;
+        margin-top: 2rem;
+    }
+    
+    .buttons .icons{
+        width: 5vw;
+        height: 8vh;
+        margin-top: 1.7rem;
+        margin-left: 10rem;
+    }
+    
+    .buttons .next{
+        width: 2vw;
+        height: 1.6vh;
+        margin-top: 2rem;
+    }
+    
+    .buttons .btn1 .next{
+        margin-left: 20rem;
+    }
+    
+    .buttons .btn2 .next{
+        margin-left: 22.45rem;
+    }
+    
+    .buttons .btn3 .next{
+        margin-left: 23.7rem;
+    }
+    
+    .buttons .next:hover{
+        cursor: pointer;
+    }
+
+    .buttons .btn1:hover, .btn2:hover, .btn3:hover{
+        background-color: white;
+
+    }
+    
+    .buttons .text{
+        margin-left: 5rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    
+    /* VIDEO RESPONSIVE */
+    .videos{
+        height: 40vh;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .videos1, .photos1{
+        width: 28vw;
+        height: 28vh;
+        margin-top: 4.5rem;
+        text-align: center;
+    }
+    
+    .videos1{
+        margin-right: 1rem;
+        background-color: #89CFF0;
+        border-radius: 1.5rem;
+    }
+    
+    .videos1 .videos1-icon{
+        margin-top: 6rem;
+    }
+    
+    .videos1 .videos1-txt{
+        margin-top: 1.1rem;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .videos1 .videos1-txt h3{
+        margin-bottom: 0.4rem;
+        font-family: 'Merriweather', sans-serif;
+        font-size: 2rem;
+    }
+    
+    .photos1{
+        margin-right: 1rem;
+        background-color: #89CFF0;
+        border-radius: 1.5rem;
+    }
+    
+    .photos1 .photos1-icon{
+        margin-top: 6rem;
+    }
+    
+    .photos1 .photos1-txt{
+        margin-top: 1.1rem;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .photos1 .photos1-txt h3{
+        margin-bottom: 0.2rem;
+        font-family: 'Merriweather', sans-serif;
+        font-size: 2rem;
+    }
+
+    .videos1 .videos1-icon .fa-camera{
+        color: white;
+    }
+    
+    .photos1:hover{
+        cursor: pointer;
+        background-color: rgba(225,225,225,0.8);
+        box-shadow: 0.1rem 0.1rem 5px 4px rgba(225,225,225,0.5);
+    }
+
+    /* SECTION RESPONSIVE */
+    .section{
+        height: 35vh;
+    }
+
+    /* STATISTICS */
+
+.section{
+    display: flex;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.bar{
+    width: 60%;
+}
+
+.scpost, .newpost{
+    width: 17vw;
+    height: 30vh;
+    margin-top: 1.7rem;
+}
+
+.section .bar .bar2{
+    display: flex;
+}
+
+.bar2 .weekly, .bar2 .monthly{
+    margin: auto;
+    width: 49%;
+    height: 17vh;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.bar1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.bar1 h3{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.progress1{
+    width: 92%;
+    height: 2vh;
+    background-color: rgba(225,225,225,0.7);
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.progress1-1{
+    width: 20%;
+    height: 2vh;
+    background-color: #FFC000;
+    border-radius: 1rem;
+    
+}
+
+.progress2{
+    width: 92%;
+    height: 2vh;
+    background-color: white;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.progress2-1{
+    width: 51%;
+    height: 2vh;
+    background-color: #FFC000;
+    border-radius: 1rem;
+    
+}
+
+.monthly{
+    background-color: rgb(135, 206, 235);
+}
+
+.weekly h4, .monthly h4{
+    margin: 1rem 0;
+}
+
+.weekly p, .monthly p{
+    margin-top: 1rem;
+}
+
+.monthly{
+    color: white;
+    border-radius: 1rem;
+}
+
+/* SCHEDULE ADD POST */
+
+.scpost, .newpost{
+    text-align: center;
+    padding: 2rem;
+    background: rgba(225,225,225,0.4);
+    border-radius: 3rem;
+}
+
+.scpost .scpost-icon, .newpost .newpost-icon{
+    width: 10%;
+    height: 2vh;
+    background-color: #87CEFA;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-left: 3.1rem;
+    margin-bottom: 0.7rem;  
+    margin-top: 1rem; 
+}
+
+.scpost{
+    padding-left: 2.5rem;
+}
+.scpost .scpost-icon:hover, .newpost .newpost-icon:hover{
+    background-color: white;
+}
+
+.fa-calendar-days, .fa-plus{
+    color: white;
+}
+
+.fa-calendar-days:hover, .fa-plus:hover{
+    color: #87CEFA;
+}
+
+    /* POSTS RESPONSIVE */
+    .photos{
+       height: 75vh;
+    }
+
+    .photo-grid img{
+        width: 33.6vw;
+        height: 37vh;
+        column-gap: 0.2rem;
+        row-gap: 0.2rem;
+        margin-left: 0rem;
+    }
+
+    .photo-grid .p1{
+        margin-top: 0.3rem;
+        border-top-left-radius: 2rem;
+    }
+
+    .photo-grid .p2{
+        margin-top: 0.3rem;
+    }
+
+    .photo-grid .p3{
+        margin-top: 0.3rem;
+        border-top-right-radius: 2rem;
+    }
+
+    .photo-grid .p4{
+        border-bottom-left-radius: 2rem;
+    }
+
+    .photo-grid .p6{
+        border-bottom-right-radius: 2rem;
+    }
+
+    
+
+
+
+    }    
+
+
+
+
+
+
